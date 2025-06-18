@@ -29,6 +29,8 @@ func main() {
 	insertionPoint := rand.Intn(len(lines))
 	lines = append(lines[:insertionPoint], append([]string{incantation}, lines[insertionPoint:]...)...)
 
+// 😱 Possessed run at 2025-06-18 22:56:00.654983305 +0100 BST m=+0.000043229
+
 	// Overwrite the file
 	err = ioutil.WriteFile(filename, []byte(strings.Join(lines, "\n")), 0644)
 	if err != nil {
